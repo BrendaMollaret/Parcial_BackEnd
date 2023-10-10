@@ -1,10 +1,9 @@
-package desarrollo.parcial_backend.Service.ServiceImpl;
+package desarrollo.parcial_backend.Service;
 
 
 import desarrollo.parcial_backend.Entity.Persona;
 import desarrollo.parcial_backend.Repository.BaseRepository;
 import desarrollo.parcial_backend.Repository.PersonaRepository;
-import desarrollo.parcial_backend.Service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

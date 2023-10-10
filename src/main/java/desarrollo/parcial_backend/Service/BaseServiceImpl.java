@@ -1,4 +1,4 @@
-package desarrollo.parcial_backend.Service.ServiceImpl;
+package desarrollo.parcial_backend.Service;
 
 import desarrollo.parcial_backend.Entity.BaseEntity;
 import desarrollo.parcial_backend.Repository.BaseRepository;

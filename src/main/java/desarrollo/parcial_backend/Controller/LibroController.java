@@ -1,7 +1,7 @@
 package desarrollo.parcial_backend.Controller;
 
 import desarrollo.parcial_backend.Entity.Libro;
-import desarrollo.parcial_backend.Service.ServiceImpl.LibroServiceImpl;
+import desarrollo.parcial_backend.Service.LibroServiceImpl;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,16 +1,16 @@
 package desarrollo.parcial_backend.Controller;
 
 import desarrollo.parcial_backend.Entity.BaseEntity;
-import desarrollo.parcial_backend.Service.ServiceImpl.BaseServiceImpl;
-import org.apache.coyote.Response;
+import desarrollo.parcial_backend.Service.BaseServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 public abstract class BaseControllerImpl<E extends BaseEntity, S extends BaseServiceImpl<E,Long>> implements BaseController<E,Long>{
 
-    private S servicio;
+    @Autowired
+    protected S servicio;
 
     @GetMapping("")
     public ResponseEntity<?> getAll() {
@@ -52,7 +52,7 @@ public abstract class BaseControllerImpl<E extends BaseEntity, S extends BaseSer
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(Long id) {
+    public ResponseEntity<?> delete(@PathVariable Long id) {
         try {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).body(servicio.delete(id));
             //NO_CONTENT: La operación de eliminación se ha completado correctamente y no hay contenido adicional para enviar en la respuesta.
@@ -61,4 +61,5 @@ public abstract class BaseControllerImpl<E extends BaseEntity, S extends BaseSer
 
         }
     }
+
 }

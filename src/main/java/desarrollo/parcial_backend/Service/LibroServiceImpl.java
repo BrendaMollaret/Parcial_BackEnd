@@ -1,9 +1,8 @@
-package desarrollo.parcial_backend.Service.ServiceImpl;
+package desarrollo.parcial_backend.Service;
 
 import desarrollo.parcial_backend.Entity.Libro;
 import desarrollo.parcial_backend.Repository.BaseRepository;
 import desarrollo.parcial_backend.Repository.LibroRepository;
-import desarrollo.parcial_backend.Service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package desarrollo.parcial_backend.Controller;
 
 import desarrollo.parcial_backend.Entity.Localidad;
-import desarrollo.parcial_backend.Service.ServiceImpl.LocalidadServiceImpl;
+import desarrollo.parcial_backend.Service.LocalidadServiceImpl;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

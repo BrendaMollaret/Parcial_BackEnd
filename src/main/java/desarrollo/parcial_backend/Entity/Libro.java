@@ -1,11 +1,19 @@
 package desarrollo.parcial_backend.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Table(name = "libros")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Libro extends BaseEntity{
 
     private String titulo;
