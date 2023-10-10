@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Localidad")
+@Table(name = "LocalidadController")
 public class Localidad extends BaseEntity{
 
     private String denominacion;
