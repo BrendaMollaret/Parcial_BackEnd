@@ -7,15 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Personas")
+@Table(name = "persona")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Persona extends BaseEntity{
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "apellido")
     private String apellido;
+
+    @Column(name = "dni")
     private int dni;
 
     @OneToOne(cascade = CascadeType.ALL)
