@@ -8,6 +8,8 @@ public class ParcialBackEndApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ParcialBackEndApplication.class, args);
+
+        System.out.println("\n\n\n----------------- FUNCIONANDO -----------------");
     }
 
 }

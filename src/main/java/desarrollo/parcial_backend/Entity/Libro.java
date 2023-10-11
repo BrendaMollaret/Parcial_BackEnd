@@ -20,11 +20,6 @@ public class Libro extends BaseEntity{
     private int fecha;
     private String genero;
     private int paginas;
-    private String autor;
-
-    @ManyToOne(cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "fk_PERSONA")
-    private Persona persona;
 
     @ManyToMany(cascade = CascadeType.REFRESH)
     private List<Autor> autores;
