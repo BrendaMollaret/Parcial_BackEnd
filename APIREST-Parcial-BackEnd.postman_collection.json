@@ -1,0 +1,5460 @@
+{
+	"info": {
+		"_postman_id": "a793ce0a-bfc9-411a-a78d-92a4121a5f2e",
+		"name": "APIREST-Parcial-BackEnd",
+		"description": "# **Desarrollo de software**\n\n#### \\-Parcial-\n\nEsta documentación describe las operaciones disponibles en la API a través de Postman. La API proporciona funcionalidades para obtener todos los registros, obtener un registro específico, crear un nuevo registro, actualizar un registro existente y eliminar un registro.\n\nSe encuentran las R**equest** para el localhost **`URL BASE =`** [<code><b>http://localhost:2001/</b></code>](http://localhost:2001/)\n\nY para el sitio en Render: [https://desarrollo-parcial-backend.onrender.com](https://desarrollo-parcial-backend.onrender.com)\n\nTambién contiene documentación ligera sobre cada Request.\n\n[Brenda Mollaret](https://github.com/BrendaMollaret/Parcial_BackEnd)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29899745"
+	},
+	"item": [
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parcial/autores",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"autores"
+							]
+						},
+						"description": "**Endpoint:** **`parcial/autores`**\n\n**Descripcion:** Este endpoint devuelve todos los registros disponibles en la base de datos."
+					},
+					"response": [
+						{
+							"name": "Obtener todos los autores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/autores",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:02:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Antoine\",\n        \"apellido\": \"de Saint-Exupéry\",\n        \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"J. K.\",\n        \"apellido\": \"Rowling\",\n        \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n    }\n]"
+						},
+						{
+							"name": "Obtener todos los autores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/autores",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:51:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Antoine\",\n        \"apellido\": \"de Saint-Exupéry\",\n        \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Antoine\",\n        \"apellido\": \"de Saint-Exupéry\",\n        \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"J. K.\",\n        \"apellido\": \"Rowling\",\n        \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n    }\n]"
+						},
+						{
+							"name": "Render-GetAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:06:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e3e34a4c1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Chris\",\n        \"apellido\": \"Pueyo\",\n        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Chris\",\n        \"apellido\": \"2\",\n        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores/2",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"autores",
+								"2"
+							]
+						},
+						"description": "**Endpoint:** `/{id}`\n\n**Descripción:** Este endpoint devuelve un registro específico según el ID proporcionado."
+					},
+					"response": [
+						{
+							"name": "Obtener un autor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/autores/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:02:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}"
+						},
+						{
+							"name": "Render-Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores/2",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:07:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e4743ae61e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"Chris\",\n    \"apellido\": \"2\",\n    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombre\": \"Chris\",\n        \"apellido\": \"2\",\n        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n   \n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"autores"
+							]
+						},
+						"description": "**Endpoint: /parcial/autores**\n\n**Descripción:**  \nEste endpoint crea un nuevo registro en la base de datos. Los datos deben enviarse en el cuerpo de la solicitud en formato JSON."
+					},
+					"response": [
+						{
+							"name": "Autor1 creado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/autores",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 21:58:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}"
+						},
+						{
+							"name": "Autor3 creado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"J. K.\",\n    \"apellido\": \"Rowling\",\n    \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/autores",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:01:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"J. K.\",\n    \"apellido\": \"Rowling\",\n    \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n}"
+						},
+						{
+							"name": "Render-create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"nombre\": \"Chris\",\n        \"apellido\": \"Pueyo\",\n        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n   \n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:01:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143db179fc61e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Chris\",\n    \"apellido\": \"Pueyo\",\n    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n}"
+						},
+						{
+							"name": "Render-create2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"nombre\": \"Chris\",\n        \"apellido\": \"2\",\n        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n   \n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:04:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143df8c5a081e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"Chris\",\n    \"apellido\": \"2\",\n    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parcial/autores/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar autor 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/autores/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:16:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}"
+						},
+						{
+							"name": "Render-Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores/1",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:07:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e54b6c1b1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Antoine\",\n    \"apellido\": \"de Saint-Exupéry\",\n    \"biografia\": \"Antoine Marie Jean-Baptiste Roger​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores/1",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"autores",
+								"1"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": [
+						{
+							"name": "Eliminar un autor",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/autores/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 22:30:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Render-Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/autores/1",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"autores",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:08:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e6575d071e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contiene todos los request para Autores"
+		},
+		{
+			"name": "Libro",
+			"item": [
+				{
+					"name": "Get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/parcial/libros",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"libros"
+							]
+						},
+						"description": "Endpoint: `/parcial/libros`\n\nObtener todos los libros."
+					},
+					"response": [
+						{
+							"name": "Libros con autores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/libros",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:02:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Harry Potter y la piedra filosofal\",\n        \"fecha\": 6041943,\n        \"genero\": \"Literatura infantil\",\n        \"paginas\": 120,\n        \"autores\": [\n            {\n                \"id\": 3,\n                \"nombre\": \"J. K.\",\n                \"apellido\": \"Rowling\",\n                \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"El principito\",\n        \"fecha\": 6041943,\n        \"genero\": \"Literatura infantil\",\n        \"paginas\": 120,\n        \"autores\": [\n            {\n                \"id\": 1,\n                \"nombre\": \"Antoine\",\n                \"apellido\": \"de Saint-Exupéry\",\n                \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n            }\n        ]\n    }\n]"
+						},
+						{
+							"name": "Render-Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:10:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e91c2c641e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Libro-Render\",\n        \"fecha\": 6041943,\n        \"genero\": \"Literatura juvenil\",\n        \"paginas\": 120,\n        \"autores\": [\n            {\n                \"id\": 2,\n                \"nombre\": \"Chris\",\n                \"apellido\": \"2\",\n                \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"Libro-Render-Eliminacion\",\n        \"fecha\": 6041943,\n        \"genero\": \"Literatura juvenil\",\n        \"paginas\": 120,\n        \"autores\": [\n            {\n                \"id\": 2,\n                \"nombre\": \"Chris\",\n                \"apellido\": \"2\",\n                \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Endpoint: `/parcial/libros/{id}`\n\nObtener un libro"
+					},
+					"response": [
+						{
+							"name": "Obtener un libro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/libros/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:02:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"titulo\": \"Harry Potter y la piedra filosofal\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 3,\n            \"nombre\": \"J. K.\",\n            \"apellido\": \"Rowling\",\n            \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros/1",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:10:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e9a0ce801e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"titulo\": \"Libro-Render\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura juvenil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2,\n            \"nombre\": \"Chris\",\n            \"apellido\": \"2\",\n            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994). estudia Literatura General y Comparada en la Universidad Complutense.​\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Libro-Render\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura juvenil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"libros"
+							]
+						},
+						"description": "Crear un nuevo libro.  \n  \nAl usar el Get ALL va a devolver el autor correcto del id con sus atributos."
+					},
+					"response": [
+						{
+							"name": "Libro con autor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"Harry Potter y la piedra filosofal\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 3\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/libros",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:01:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"titulo\": \"Harry Potter y la piedra filosofal\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 3,\n            \"nombre\": null,\n            \"apellido\": null,\n            \"biografia\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Libro con autor 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/libros",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:02:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1,\n            \"nombre\": null,\n            \"apellido\": null,\n            \"biografia\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Libro eliminación",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"Libro para eliminación\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/libros",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:05:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"titulo\": \"Libro para eliminación\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2,\n            \"nombre\": null,\n            \"apellido\": null,\n            \"biografia\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"Libro-Render\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura juvenil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"libros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:09:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e7a55b8c1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"titulo\": \"Libro-Render\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura juvenil\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 2,\n            \"nombre\": null,\n            \"apellido\": null,\n            \"biografia\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil, Novela corta, Fábula\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros/1",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"libros",
+								"1"
+							]
+						},
+						"description": "Actualizar un libro"
+					},
+					"response": [
+						{
+							"name": "Libro 1 actualizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil, Novela corta, Fábula\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/libros/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:04:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil, Novela corta, Fábula\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Antoine\",\n            \"apellido\": \"de Saint-Exupéry\",\n            \"biografia\": \"Antoine Marie Jean-Baptiste Roger, conde de Saint-Exupéry​, conocido como Antoine de Saint-Exupéry, fue un aviador y escritor francés, autor de la famosa obra El principito.\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"titulo\": \"El principito\",\n    \"fecha\": 6041943,\n    \"genero\": \"Literatura infantil, Novela corta, Fábula\",\n    \"paginas\": 120,\n    \"autores\": [\n        {\n            \"id\": 1\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros/1",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:09:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143e83cdee81e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"Los datos de la solicitud son inválidos. Por favor, revise los datos e intente de nuevo.\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros/4",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"libros",
+								"4"
+							]
+						},
+						"description": "Eliminar libro previamente creado."
+					},
+					"response": [
+						{
+							"name": "Libro id 4 - Eliminado",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/libros/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:05:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Render - Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/libros/4",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"libros",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:12:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143ec79f84f1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contiene todos los request para Libros"
+		},
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/parcial/personas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"personas"
+							]
+						},
+						"description": "Obtener todas las personas"
+					},
+					"response": [
+						{
+							"name": "Obtener todas las personas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/personas",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:53:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"nombre\": \"Brenda\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 1223456,\n        \"domicilio\": {\n            \"id\": 4,\n            \"calle\": \"Callesita\",\n            \"numero\": 2333,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"San rafael\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 2,\n                \"titulo\": \"Harry potter y el prisionero de Azkaban\",\n                \"fecha\": 2004,\n                \"genero\": \"Novela\",\n                \"paginas\": 360,\n                \"autores\": [\n                    {\n                        \"id\": 1,\n                        \"nombre\": \"J. K.\",\n                        \"apellido\": \"Rowling\",\n                        \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Sabrina\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 5,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 2,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 3,\n                \"titulo\": \"El chico de las estrellas\",\n                \"fecha\": 2015,\n                \"genero\": \"Ficción\",\n                \"paginas\": 208,\n                \"autores\": [\n                    {\n                        \"id\": 2,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						},
+						{
+							"name": "Render-Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:30:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "814405baac411e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"nombre\": \"Sabrina\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 6,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 7,\n                \"titulo\": \"Libro-Render-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura juvenil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 3,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": 5,\n        \"nombre\": \"Brenda\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 7,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 8,\n                \"titulo\": \"Libro-Render-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura juvenil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 3,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": 6,\n        \"nombre\": \"Brenda-Eliminacion\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 8,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 9,\n                \"titulo\": \"Libro-Render-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura juvenil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 3,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/4",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"4"
+							]
+						},
+						"description": "Obtener una persona"
+					},
+					"response": [
+						{
+							"name": "Obtener persona",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:53:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"Brenda\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 1223456,\n    \"domicilio\": {\n        \"id\": 4,\n        \"calle\": \"Callesita\",\n        \"numero\": 2333,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"San rafael\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 2,\n            \"titulo\": \"Harry potter y el prisionero de Azkaban\",\n            \"fecha\": 2004,\n            \"genero\": \"Novela\",\n            \"paginas\": 360,\n            \"autores\": [\n                {\n                    \"id\": 1,\n                    \"nombre\": \"J. K.\",\n                    \"apellido\": \"Rowling\",\n                    \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos.​\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/4",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:30:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8144069d2edd1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"id\": 6,\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 7,\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"personas"
+							]
+						},
+						"description": "La creación de un nuevo perfil de usuario implica una solicitud compleja debido a las diversas relaciones que la entidad \"Persona\" tiene con otras entidades en el sistema. Esta solicitud es crucial ya que implica la creación y vinculación de varias entidades.\n\nPara crear una nueva persona, se deben proporcionar detalles clave sobre la persona, como nombre, apellido y dni. Además, estas son las consideraciones especiales a tener en cuenta:\n\n- **Domicilio**: Un domicilio debe estar asociado a la persona. Si el domicilio no existe, primero se debe crear y luego vincularlo con la persona.\n    \n- **Libros**: La persona puede estar asociada con varios libros. Si los libros ya existen en el sistema, se pueden vincular directamente proporcionando sus IDs. Si no, los libros deben crearse primero antes de vincularlos con la persona.\n    \n- **Autores**: Similar a los libros, la persona puede tener varios autores asociados. Si los autores ya existen en la base de datos, sus IDs deben proporcionarse para la asociación. Si no existen, deben crearse antes de la creación de la persona.\n    \n\nEsta solicitud es crucial para asegurar que la información de la persona esté completa y correctamente vinculada con otras entidades en el sistema, lo que garantiza la integridad de los datos."
+					},
+					"response": [
+						{
+							"name": "Creación de una persona",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Brenda\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 1223456,\n    \"domicilio\": {\n        \"calle\": \"Callesita\",\n        \"numero\": 2333,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"San rafel\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"Harry potter y el prisionero de Azkaban\",\n            \"fecha\": 2004,\n            \"genero\": \"Novela\",\n            \"paginas\": 360,\n            \"autores\": [\n                {\n                    \"id\": 1,\n                    \"nombre\": \"J. K.\",\n                    \"apellido\": \"Rowling\",\n                    \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica.​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      \n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/personas",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:47:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"Brenda\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 1223456,\n    \"domicilio\": {\n        \"id\": 4,\n        \"calle\": \"Callesita\",\n        \"numero\": 2333,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"San rafel\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 2,\n            \"titulo\": \"Harry potter y el prisionero de Azkaban\",\n            \"fecha\": 2004,\n            \"genero\": \"Novela\",\n            \"paginas\": 360,\n            \"autores\": [\n                {\n                    \"id\": 1,\n                    \"nombre\": \"J. K.\",\n                    \"apellido\": \"Rowling\",\n                    \"biografia\": \"Joanne Rowling​, quien escribe bajo los seudónimos de J. K. Rowling​ y Robert Galbraith, es una escritora, productora de cine y guionista británica.​\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Creación de una persona2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"El chico de las estrellas\",\n            \"fecha\": 2015,\n            \"genero\": \"Ficción\",\n            \"paginas\": 208,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      \n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/personas",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:52:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"id\": 5,\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 3,\n            \"titulo\": \"El chico de las estrellas\",\n            \"fecha\": 2015,\n            \"genero\": \"Ficción\",\n            \"paginas\": 208,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Create persona",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:28:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8144038cca361e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"id\": 6,\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 7,\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Render-Create persona2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Brenda\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:29:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8144046b7d961e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"nombre\": \"Brenda\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"id\": 7,\n        \"calle\": \"CalleIntermedia\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 8,\n            \"titulo\": \"Libro-Render-Persona\",\n            \"fecha\": 6041943,\n            \"genero\": \"Literatura juvenil\",\n            \"paginas\": 120,\n            \"autores\": [\n                {\n                    \"id\": 3,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleACTUALIZADA\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"El chico de las estrellas\",\n            \"fecha\": 2015,\n            \"genero\": \"Ficción\",\n            \"paginas\": 208,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      \n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parcial/personas/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"2"
+							]
+						},
+						"description": "Actualización de una persona.  \n  \nHay que tomar en cuenta lo mismo que para su creación."
+					},
+					"response": [
+						{
+							"name": "Actualizar persona",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"calle\": \"CalleACTUALIZADA\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"titulo\": \"El chico de las estrellas\",\n            \"fecha\": 2015,\n            \"genero\": \"Ficción\",\n            \"paginas\": 208,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                }\n            ]\n        }\n    ]\n    \n\n}\n      \n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:54:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"nombre\": \"Sabrina\",\n    \"apellido\": \"Mollaret\",\n    \"dni\": 78945613,\n    \"domicilio\": {\n        \"id\": 6,\n        \"calle\": \"CalleACTUALIZADA\",\n        \"numero\": 2553,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 4,\n            \"titulo\": \"El chico de las estrellas\",\n            \"fecha\": 2015,\n            \"genero\": \"Ficción\",\n            \"paginas\": 208,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"Chris\",\n                    \"apellido\": \"Pueyo\",\n                    \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/6",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"6"
+							]
+						},
+						"description": "Eliminar persona previamente creada."
+					},
+					"response": [
+						{
+							"name": "PersonaEliminada",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:55:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Render-Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/6",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"6"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:31:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "814407b2dc181e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/search?filtro=e",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "e"
+								}
+							]
+						},
+						"description": "Queries JPA  \nCon un filtro por nombre."
+					},
+					"response": [
+						{
+							"name": "Filtrado por \"e\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/search?filtro=e",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"search"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "e"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 01:42:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Brenda\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 1223456,\n        \"domicilio\": {\n            \"id\": 2,\n            \"calle\": \"Callesita\",\n            \"numero\": 2333,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 2,\n                \"titulo\": \"Libro-Ejemplo2-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura infantil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 1,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						},
+						{
+							"name": "Render-Filtrado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/search?filtro=e",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"search"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "e"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:31:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "81440834bf2b1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"nombre\": \"Sabrina\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 6,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 7,\n                \"titulo\": \"Libro-Render-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura juvenil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 3,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": 5,\n        \"nombre\": \"Brenda\",\n        \"apellido\": \"Mollaret\",\n        \"dni\": 78945613,\n        \"domicilio\": {\n            \"id\": 7,\n            \"calle\": \"CalleIntermedia\",\n            \"numero\": 2553,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Las heras\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 8,\n                \"titulo\": \"Libro-Render-Persona\",\n                \"fecha\": 6041943,\n                \"genero\": \"Literatura juvenil\",\n                \"paginas\": 120,\n                \"autores\": [\n                    {\n                        \"id\": 3,\n                        \"nombre\": \"Chris\",\n                        \"apellido\": \"Pueyo\",\n                        \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/paged?page=0&size=5&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "Obtener todas las personas pero paginadas, es decir, no nos trae todas las personas de golpe.\n\nEsta query nos trae desde la pagina 0, con un tamaño de 5\n\ny con el id de manera descendiente. (Esto último es opcional)"
+					},
+					"response": [
+						{
+							"name": "Obtener personas paginado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/paged?page=0&size=5&sort=id,desc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"paged"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 01:45:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Brenda\",\n            \"apellido\": \"Mollaret\",\n            \"dni\": 1223456,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Callesita\",\n                \"numero\": 2333,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Las heras\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"Libro-Ejemplo2-Persona\",\n                    \"fecha\": 6041943,\n                    \"genero\": \"Literatura infantil\",\n                    \"paginas\": 120,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Chris\",\n                            \"apellido\": \"Pueyo\",\n                            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+						},
+						{
+							"name": "Render-GET ALL PAGED",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/paged?page=0&size=5&sort=id,desc",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"paged"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:32:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "814408ecdf931e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 5,\n            \"nombre\": \"Brenda\",\n            \"apellido\": \"Mollaret\",\n            \"dni\": 78945613,\n            \"domicilio\": {\n                \"id\": 7,\n                \"calle\": \"CalleIntermedia\",\n                \"numero\": 2553,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Las heras\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 8,\n                    \"titulo\": \"Libro-Render-Persona\",\n                    \"fecha\": 6041943,\n                    \"genero\": \"Literatura juvenil\",\n                    \"paginas\": 120,\n                    \"autores\": [\n                        {\n                            \"id\": 3,\n                            \"nombre\": \"Chris\",\n                            \"apellido\": \"Pueyo\",\n                            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"nombre\": \"Sabrina\",\n            \"apellido\": \"Mollaret\",\n            \"dni\": 78945613,\n            \"domicilio\": {\n                \"id\": 6,\n                \"calle\": \"CalleIntermedia\",\n                \"numero\": 2553,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Las heras\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 7,\n                    \"titulo\": \"Libro-Render-Persona\",\n                    \"fecha\": 6041943,\n                    \"genero\": \"Literatura juvenil\",\n                    \"paginas\": 120,\n                    \"autores\": [\n                        {\n                            \"id\": 3,\n                            \"nombre\": \"Chris\",\n                            \"apellido\": \"Pueyo\",\n                            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"unsorted\": false,\n            \"sorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"last\": true,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"unsorted\": false,\n        \"sorted\": true\n    },\n    \"numberOfElements\": 2,\n    \"first\": true,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/parcial/personas/searchPaged?filtro=Brenda&page=0&size=5&sort=id,desc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Brenda"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						},
+						"description": "Hacer una búsqueda paginada, con un filtro por nombre, desde la pagina 0 a la página 5, ordenado de manera descendiente por su id."
+					},
+					"response": [
+						{
+							"name": "Search Paged",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/personas/searchPaged?filtro=Brenda&page=0&size=5&sort=id,desc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"searchPaged"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "Brenda"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 01:49:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Brenda\",\n            \"apellido\": \"Mollaret\",\n            \"dni\": 1223456,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Callesita\",\n                \"numero\": 2333,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Las heras\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"Libro-Ejemplo2-Persona\",\n                    \"fecha\": 6041943,\n                    \"genero\": \"Literatura infantil\",\n                    \"paginas\": 120,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Chris\",\n                            \"apellido\": \"Pueyo\",\n                            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994), conocido como Peter Pan en las redes sociales, estudia Literatura General y Comparada en la Universidad Complutense.​\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+						},
+						{
+							"name": "Render-Search Paged",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/personas/searchPaged?filtro=Brenda&page=0&size=5&sort=id,desc",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"personas",
+										"searchPaged"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "Brenda"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:32:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8144097ee8bb1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 5,\n            \"nombre\": \"Brenda\",\n            \"apellido\": \"Mollaret\",\n            \"dni\": 78945613,\n            \"domicilio\": {\n                \"id\": 7,\n                \"calle\": \"CalleIntermedia\",\n                \"numero\": 2553,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Las heras\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 8,\n                    \"titulo\": \"Libro-Render-Persona\",\n                    \"fecha\": 6041943,\n                    \"genero\": \"Literatura juvenil\",\n                    \"paginas\": 120,\n                    \"autores\": [\n                        {\n                            \"id\": 3,\n                            \"nombre\": \"Chris\",\n                            \"apellido\": \"Pueyo\",\n                            \"biografia\": \"Christian Martínez Pueyo (Madrid, 1994).​\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"unsorted\": false,\n            \"sorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"last\": true,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"unsorted\": false,\n        \"sorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"first\": true,\n    \"empty\": false\n}"
+						}
+					]
+				}
+			],
+			"description": "Contiene todos los request para Personas"
+		},
+		{
+			"name": "Domicilio",
+			"item": [
+				{
+					"name": "Get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/info?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"info"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtener todos los domicilios"
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/domicilios",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:19:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"calle\": \"CalleFalsa\",\n        \"numero\": 123,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"calle\": \"CalleVerdadera\",\n        \"numero\": 456,\n        \"localidad\": {\n            \"id\": 3,\n            \"denominacion\": \"Godoy cruz\"\n        }\n    }\n]"
+						},
+						{
+							"name": "Render-Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:16:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f27e09231e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"calle\": \"CalleVerdadera\",\n        \"numero\": 456,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Las heras\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"calle\": \"CalleFalsa\",\n        \"numero\": 123,\n        \"localidad\": {\n            \"id\": 3,\n            \"denominacion\": \"San rafael\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios/1",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"domicilios",
+								"1"
+							]
+						},
+						"description": "Obtener un domiclio"
+					},
+					"response": [
+						{
+							"name": "Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/domicilios/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"domicilios",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:19:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"calle\": \"CalleFalsa\",\n    \"numero\": 123,\n    \"localidad\": {\n        \"id\": 2,\n        \"denominacion\": \"Las heras\"\n    }\n}"
+						},
+						{
+							"name": "Render-Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios/1",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"domicilios",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:17:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f2ffcda21e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"calle\": \"CalleVerdadera\",\n    \"numero\": 456,\n    \"localidad\": {\n        \"id\": 1,\n        \"denominacion\": \"Las heras\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": 123,\n    \"calle\": \"CalleFalsa\",\n    \"localidad\": {\n        \"id\": 3\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"domicilios"
+							]
+						},
+						"description": "Para agregar un nuevo domicilio:\n\n1. **Proporcionar atributos**: calle y numero.\n    \n2. Debe existir una localidad previamente o crearla en su defecto."
+					},
+					"response": [
+						{
+							"name": "Create data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numero\": 123,\n    \"calle\": \"CalleFalsa\",\n    \"localidad\": {\n        \"id\": 2\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2001/parcial/domicilios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2001",
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:18:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"calle\": \"CalleFalsa\",\n    \"numero\": 123,\n    \"localidad\": {\n        \"id\": 2,\n        \"denominacion\": null\n    }\n}"
+						},
+						{
+							"name": "Create data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numero\": 456,\n    \"calle\": \"CalleVerdadera\",\n    \"localidad\": {\n        \"id\": 3\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2001/parcial/domicilios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2001",
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:18:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"calle\": \"CalleVerdadera\",\n    \"numero\": 456,\n    \"localidad\": {\n        \"id\": 3,\n        \"denominacion\": null\n    }\n}"
+						},
+						{
+							"name": "Render-Create data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numero\": 456,\n    \"calle\": \"CalleVerdadera\",\n    \"localidad\": {\n        \"id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:16:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f137abde1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"calle\": \"CalleVerdadera\",\n    \"numero\": 456,\n    \"localidad\": {\n        \"id\": 1,\n        \"denominacion\": null\n    }\n}"
+						},
+						{
+							"name": "Render-Create data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numero\": 123,\n    \"calle\": \"CalleFalsa\",\n    \"localidad\": {\n        \"id\": 3\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"domicilios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:16:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f217eb791e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"calle\": \"CalleFalsa\",\n    \"numero\": 123,\n    \"localidad\": {\n        \"id\": 3,\n        \"denominacion\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/info?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"info"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Actualizar un domicilio.\n\nHay que tener en cuenta lo mismo que para su creación."
+					},
+					"response": [
+						{
+							"name": "Update data",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\n    \"calle\": \"CalleIntermedia\",\n    \"numero\": 123,\n    \"localidad\": {\n        \"id\": 2,\n        \"denominacion\": \"Las heras\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/domicilios/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"domicilios",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:20:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"calle\": \"CalleIntermedia\",\n    \"numero\": 123,\n    \"localidad\": {\n        \"id\": 2,\n        \"denominacion\": \"Las heras\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios/2",
+							"protocol": "https",
+							"host": [
+								"desarrollo-parcial-backend",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"parcial",
+								"domicilios",
+								"2"
+							]
+						},
+						"description": "Eliminación de un domicilio."
+					},
+					"response": [
+						{
+							"name": "Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/domicilios/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"domicilios",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:20:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Render-Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/domicilios/2",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"domicilios",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:17:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f39b2fdf1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contiene todos los request para Domicilio"
+		},
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "Get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/parcial/localidades",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"localidades"
+							]
+						},
+						"description": "Obtener todas las localidades"
+					},
+					"response": [
+						{
+							"name": "Obtener todas las localidades",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/localidades",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"denominacion\": null\n    },\n    {\n        \"id\": 2,\n        \"denominacion\": \"Godoy cruz\"\n    },\n    {\n        \"id\": 3,\n        \"denominacion\": \"Guaymallen\"\n    },\n    {\n        \"id\": 4,\n        \"denominacion\": \"Las heras\"\n    }\n]"
+						},
+						{
+							"name": "Render-Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/localidades",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:15:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f003dab91e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"denominacion\": \"Las heras\"\n    },\n    {\n        \"id\": 3,\n        \"denominacion\": \"San rafael\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/parcial/localidades/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"localidades",
+								"2"
+							]
+						},
+						"description": "Obtener una localidad"
+					},
+					"response": [
+						{
+							"name": "Obtener 1 localidad",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/parcial/localidades/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"localidades",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:07:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"denominacion\": \"Godoy cruz\"\n}"
+						},
+						{
+							"name": "Render-Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/localidades/3",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"localidades",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:15:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143f0ab1b1d1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"denominacion\": \"San rafael\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parcial/localidades",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parcial",
+								"localidades"
+							]
+						},
+						"description": "La creación de una localidad sólo requiere de su denominación."
+					},
+					"response": [
+						{
+							"name": "Creación localidad",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"denominacion\": \"Las heras\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/localidades",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:06:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"denominacion\": \"Las heras\"\n}"
+						},
+						{
+							"name": "Render-Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n      \n        \"denominacion\": \"Las heras\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/localidades",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:13:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143ed675bea1e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"denominacion\": \"Las heras\"\n}"
+						},
+						{
+							"name": "Render-Create2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n      \n        \"denominacion\": \"Godoy cruz\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/localidades",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:14:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143ee72d9521e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"denominacion\": \"Godoy cruz\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/info?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"info"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "La actualización de una localidad es igual a su creación."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/info?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"info"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "La eliminación de una localidad es igual a todas."
+					},
+					"response": [
+						{
+							"name": "Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/parcial/localidades/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"parcial",
+										"localidades",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Oct 2023 23:13:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Render-Delete data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://desarrollo-parcial-backend.onrender.com/parcial/localidades/2",
+									"protocol": "https",
+									"host": [
+										"desarrollo-parcial-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"parcial",
+										"localidades",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:15:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8143efa9f8d61e74-EZE"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contiene todos los request para Localidad"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
