@@ -4,6 +4,8 @@ import desarrollo.parcial_backend.Entity.BaseEntity;
 import desarrollo.parcial_backend.Repository.BaseRepository;
 import desarrollo.parcial_backend.Service.BaseService;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.io.Serializable;
 import java.util.List;
@@ -25,6 +27,21 @@ public abstract class BaseServiceImpl<E extends BaseEntity, ID extends Serializa
         try{
 
             List<E> entities = baseRepository.findAll();
+            return entities;
+
+        } catch (Exception e) {
+            throw new Exception("Error al intentar realizar la operación: " + e.getMessage());
+
+        }
+    }
+
+    //PAGINACIÓN
+    @Override
+    @Transactional
+    public Page<E> findAll(Pageable pageable) throws Exception {
+        try{
+
+            Page<E> entities = baseRepository.findAll(pageable);
             return entities;
 
         } catch (Exception e) {
